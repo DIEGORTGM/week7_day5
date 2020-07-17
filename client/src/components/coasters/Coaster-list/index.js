@@ -31,7 +31,7 @@ class CoasterList extends Component {
     updateCoasterList = () => {
         this.coasterService
             .getAllCoasters()
-            .then(response => { })
+            .then(response => this.setState({ coasters: response.data }))
             .catch(err => console.log(err))
     }
 
